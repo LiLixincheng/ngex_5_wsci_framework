@@ -1,0 +1,33 @@
+{
+  "diagnostic_context": {
+    "problem": "I changed my university password this morning.\nNow my Windows laptop won't connect to campus Wi-Fi,\nbut my phone still works.",
+    "device": "Windows laptop",
+    "service": "eduroam campus Wi-Fi",
+    "wifi_status": "operational",
+    "relevant_knowledge": "**Compressed Context:**  \n- **Network name:** eduroam.  \n- **Windows troubleshooting:**  \n  1. If password changed, Windows may cache old credentials.  \n  2. Forget eduroam network, then reconnect with new password.  \n  3. If connection fails, confirm university account is active.  \n- **General notes:**  \n  - Repeated old-password attempts may temporarily lock an account.  \n  - Service status: eduroam is operational.  \n  - If one device works (e.g., phone) but another (e.g., laptop) does not, the issue is likely cached credentials on the failing device."
+  },
+  "resolution_context": {
+    "summary": "Windows laptop unable to connect to eduroam after password change, but phone works. Likely cached credentials on the laptop.",
+    "likely_cause": "Cached old credentials in Windows after password change.",
+    "steps": [
+      "Open Settings > Network & Internet > Wi-Fi > Manage known networks.",
+      "Select 'eduroam' and click 'Forget' to remove cached credentials.",
+      "Reconnect to eduroam and enter the new password when prompted.",
+      "Check if account is active via university portal (password changes sometimes require account revalidation).",
+      "Verify laptop's date/time settings are correct (Authentication may fail with incorrect clock).",
+      "If still failing, contact university IT support to clear cached credentials or check account status."
+    ],
+    "warning": "Repeated failed attempts with old password may temporarily lock account. Ensure you use the correct new password during reconnect.",
+    "escalation": "If steps fail, IT may need to reset network credentials or investigate device-specific issues."
+  },
+  "report_context": {
+    "selected_file_count": 3,
+    "selected_files": [
+      "wifi_setup.txt",
+      "password_changes.txt",
+      "service_status.txt"
+    ],
+    "raw_context_characters": 2179,
+    "compressed_context_characters": 559
+  }
+}
